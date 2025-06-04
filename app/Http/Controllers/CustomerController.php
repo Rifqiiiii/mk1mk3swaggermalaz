@@ -9,6 +9,23 @@ use Illuminate\Validation\Rule;
 
 class CustomerController extends Controller
 {
+    /**
+ * @OA\Get(
+ *     path="/api/customers",
+ *     summary="Get list of customers",
+ *     tags={"Customers"},
+ *     security={{"bearerAuth":{}}},
+ *     @OA\Response(
+ *         response=200,
+ *         description="Success"
+ *     ),
+ *     @OA\Response(
+ *         response=401,
+ *         description="Unauthorized"
+ *     )
+ * )
+ */
+
     public function index(): JsonResponse
     {
         $customers = Customer::all();

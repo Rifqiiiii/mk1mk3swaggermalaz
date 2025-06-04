@@ -57,7 +57,6 @@ return [
         'securitySchemes' => [
             'bearerAuth' => [
                 'type' => 'http',
-                'description' => 'Masukkan token JWT Anda di sini (format: Bearer {token})',
                 'scheme' => 'bearer',
                 'bearerFormat' => 'JWT',
             ],
